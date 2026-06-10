@@ -34,7 +34,7 @@ def normalize_str(s):
 
 def evaluate():
     ref_path = "refrence/VOLUME I.pdf.xlsm"
-    out_path = "output/VOLUME_I_extracted_v2.xlsm"
+    out_path = "output/VOLUME_I_extracted_local.xlsm"
     
     if not os.path.exists(ref_path):
         print(f"Error: Reference file {ref_path} not found.")

@@ -9,7 +9,7 @@ class OCRExtractor:
         Initializes the PaddleOCR engine.
         """
         # Set show_log=False to prevent PaddleOCR from printing too much to the console
-        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang, show_log=False)
+        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang)
         
     def extract_text(self, image: np.ndarray) -> List[Tuple[List[List[float]], Tuple[str, float]]]:
         """
@@ -20,7 +20,7 @@ class OCRExtractor:
             [box_coordinates, (text, confidence)]
             box_coordinates: [[x1, y1], [x2, y2], [x3, y3], [x4, y4]]
         """
-        result = self.ocr.ocr(image, cls=True)
+        result = self.ocr.ocr(image)
         # PaddleOCR returns a list of lists (for each batch/image), we want the first image's results
         if not result or not result[0]:
             return []
