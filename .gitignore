@@ -1,0 +1,20 @@
+# Environment Variables (Azure Keys - DO NOT COMMIT!)
+.env
+
+# Large PDF Files
+input/*.pdf
+
+# Generated Output Files
+output/*.xlsm
+
+# Cached Azure Form Recognizer Responses
+output/azure_cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS Files
+.DS_Store
+Thumbs.db
