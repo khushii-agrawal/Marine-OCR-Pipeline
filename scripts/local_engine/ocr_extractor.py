@@ -1,3 +1,6 @@
+import os
+os.environ["FLAGS_enable_pir_api"] = "0"
+os.environ["FLAGS_use_mkldnn"] = "0"
 import re
 from typing import Dict, Any, List, Tuple
 from paddleocr import PaddleOCR
@@ -9,7 +12,7 @@ class OCRExtractor:
         Initializes the PaddleOCR engine.
         """
         # Set show_log=False to prevent PaddleOCR from printing too much to the console
-        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang)
+        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang, show_log=False)
         
     def extract_text(self, image: np.ndarray) -> List[Tuple[List[List[float]], Tuple[str, float]]]:
         """
@@ -47,12 +50,15 @@ class OCRExtractor:
                         drwg_no = cleaned
                         
             # 2. Heuristic for Sub-Component: e.g., "Safety Equipment"
-            # Titlecased, no numbers, > 5 characters, doesn't contain manufacturer names or table headers
-            if text.istitle() and not any(c.isdigit() for c in text) and len(text) > 5:
-                if not sub_component and "HYUNDAI" not in text.upper() and "MAN" not in text.upper():
-                    if text.strip().lower() not in stop_words:
-                        sub_component = text.strip()
-                        
+            # No numbers, > 5 characters, doesn't contain manufacturer names or table headers
+            # Relaxed istitle() to allow hyphens and minor casing variations.
+            if not any(c.isdigit() for c in text) and len(text) > 5:
+                # Basic check: starts with a capital letter
+                if text[0].isupper() and not text.isupper():
+                    if not sub_component and "HYUNDAI" not in text.upper() and "MAN B&W" not in text.upper():
+                        if text.strip().lower() not in stop_words and text.strip().lower() != "plate":
+                            sub_component = text.strip()
+                            
         return drwg_no, sub_component
 
 if __name__ == "__main__":

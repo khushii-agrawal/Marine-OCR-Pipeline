@@ -2,7 +2,7 @@ import os
 import fitz
 import openpyxl
 from pdf_converter import pdf_page_to_image, preprocess_for_ocr
-from table_detector import detect_table_cells
+from table_detector import group_ocr_into_rows, assign_columns
 from ocr_extractor import OCRExtractor
 
 # --- Configuration Constants ---
@@ -13,57 +13,41 @@ MANUAL_PDF_NAME = "VOLUME I.pdf"
 DEFAULT_UOM = "Pcs"
 DRAWING_PAGE_WITH_POS = "Yes"
 
-def map_text_to_cells(cells, ocr_results):
-    """
-    Maps PaddleOCR text bounding boxes to OpenCV detected table cells.
-    """
-    if not cells:
-        return []
+# Table header keywords to detect table pages and skip header rows
+HEADER_KEYWORDS = {"item no", "item", "qty", "designation", "code no", "name", "no"}
 
-    # Reconstruct the grid by grouping cells into rows
-    rows = []
-    current_row = []
-    last_y = -1
-    for cell in cells:
-        x, y, w, h = cell
-        # Allow 15px variance for row grouping
-        if last_y == -1 or abs(y - last_y) < 15:
-            current_row.append(cell)
-        else:
-            # Sort the row by x-coordinate to ensure columns are in order
-            rows.append(sorted(current_row, key=lambda c: c[0]))
-            current_row = [cell]
-        last_y = y
-    if current_row:
-        rows.append(sorted(current_row, key=lambda c: c[0]))
 
-    table_data = []
-    for row in rows:
-        row_data = {}
-        for col_idx, cell in enumerate(row):
-            cx, cy, cw, ch = cell
-            cell_text = []
-            
-            for res in ocr_results:
-                box, (text, conf) = res
-                xs = [p[0] for p in box]
-                ys = [p[1] for p in box]
-                tx, ty, tw, th = min(xs), min(ys), max(xs) - min(xs), max(ys) - min(ys)
-                
-                # Check center of text box is inside the cell
-                center_x = tx + tw / 2
-                center_y = ty + th / 2
-                
-                if cx <= center_x <= cx + cw and cy <= center_y <= cy + ch:
-                    cell_text.append(text)
-            
-            row_data[col_idx] = " ".join(cell_text).strip()
-        
-        # Only add row if it's not completely empty
-        if any(row_data.values()):
-            table_data.append(row_data)
-            
-    return table_data
+def is_table_page(ocr_results, page_width, page_height):
+    """
+    Detect if a page is a table page by looking for table header keywords
+    ("Item no", "Qty", "Designation") in the expected header region.
+    """
+    for res in ocr_results:
+        box, (text, conf) = res
+        xs = [p[0] for p in box]
+        ys = [p[1] for p in box]
+        rel_y = ((min(ys) + max(ys)) / 2) / page_height
+
+        # Table headers are typically in the top 20% of the page
+        if rel_y < 0.20:
+            if text.strip().lower() in {"item no", "qty", "designation", "item"}:
+                return True
+    return False
+
+
+def is_header_row(row_data):
+    """Check if a row is a table header by looking for header keywords."""
+    for col_idx, text in row_data.items():
+        if text.strip().lower() in HEADER_KEYWORDS:
+            return True
+    return False
+
+
+def is_valid_item_no(text):
+    """Check if text looks like a valid item number (e.g., 012, 024, 036)."""
+    cleaned = text.strip().replace(" ", "")
+    return cleaned.isdigit() and len(cleaned) >= 2
+
 
 def process_pdf_locally(pdf_path):
     print("Initializing Local PaddleOCR Engine...")
@@ -73,61 +57,62 @@ def process_pdf_locally(pdf_path):
     total_pages = len(doc)
     extracted_rows = []
     
-    # Process in 2-page chunks (Drawing page, Table page)
-    for i in range(0, total_pages, 2):
-        print(f"Processing pages {i+1} and {min(i+2, total_pages)}...")
+    # Track the last known drawing number and sub-component
+    last_drwg_no = ""
+    last_sub_component = ""
+    
+    for page_idx in range(total_pages):
+        page_no = page_idx + 1  # 1-based
+        print(f"\nProcessing page {page_no}/{total_pages}...")
         
-        drwg_no = ""
-        sub_component = ""
+        img = pdf_page_to_image(pdf_path, page_idx, dpi=200)
+        page_height, page_width = img.shape[:2]
         
-        # 1. Process Drawing Page
-        drwg_img = pdf_page_to_image(pdf_path, i, dpi=200) # 200 dpi is usually enough for text
-        ocr_results_drwg = extractor.extract_text(drwg_img)
-        drwg_no, sub_component = extractor.find_drawing_and_subcomponent(ocr_results_drwg)
+        ocr_results = extractor.extract_text(img)
         
-        # 2. Process Table Page (if exists)
-        if i + 1 < total_pages:
-            table_page_no = i + 2
-            table_img = pdf_page_to_image(pdf_path, i + 1, dpi=200)
-            binary_img = preprocess_for_ocr(table_img)
+        if not ocr_results:
+            print(f"  No text found on page {page_no}.")
+            continue
+        
+        # Determine if this is a table page or a drawing page
+        if is_table_page(ocr_results, page_width, page_height):
+            # === TABLE PAGE ===
+            print(f"  [TABLE PAGE] Using Drawing No: {last_drwg_no}, Sub-Component: {last_sub_component}")
             
-            print(f"  Detecting table cells on page {table_page_no}...")
-            cells = detect_table_cells(binary_img)
+            rows = group_ocr_into_rows(ocr_results, page_width, page_height, y_tolerance=15)
+            table_data = assign_columns(rows)
             
-            print(f"  Running OCR on page {table_page_no}...")
-            ocr_results_table = extractor.extract_text(table_img)
+            print(f"  Found {len(table_data)} rows of text.")
             
-            print(f"  Mapping text to {len(cells)} cells...")
-            table_data = map_text_to_cells(cells, ocr_results_table)
-            
-            # Skip header row (assumed to be row 0)
-            for row_idx in range(1, len(table_data)):
-                row_cols = table_data[row_idx]
+            for row_cols in table_data:
+                if is_header_row(row_cols):
+                    continue
                 
-                # Basic column assumption: 0=ItemNo, 1=Qty, 2=Designation
-                pos_no = row_cols.get(0, "")
-                qty = row_cols.get(1, "")
-                name_of_spare = row_cols.get(2, "")
+                pos_no = row_cols.get(0, "").strip().replace(" ", "")
+                qty = row_cols.get(1, "").strip()
+                name_of_spare = row_cols.get(2, "").strip()
                 
-                if not pos_no or pos_no == "-":
+                if not is_valid_item_no(pos_no):
                     continue
                     
-                mfg_part_no = f"{drwg_no}-{pos_no}" if drwg_no else ""
+                mfg_part_no = f"{last_drwg_no}-{pos_no}" if last_drwg_no else ""
+                
+                print(f"    Row: Pos={pos_no}, Qty={qty}, Name={name_of_spare}")
                 
                 row_data_arr = [
                     COMPONENT_NAME,           # A: Component Name
-                    sub_component,            # B: Sub Component Name
+                    last_sub_component,       # B: Sub Component Name
                     MANUFACTURER,             # C: Manufacturer
                     MODEL,                    # D: Model
                     name_of_spare,            # E: Name Of Spare
                     mfg_part_no,              # F: MfgPart No
-                    drwg_no,                  # G: Drwg.No
+                    last_drwg_no,             # G: Drwg.No
                     pos_no,                   # H: Pos. No.
                     "",                       # I: Size & Dimension
                     "",                       # J: Material
                     "",                       # K: Remarks
                     "",                       # L: Other details if any
-                    table_page_no,            # M: Page No
+                    page_no,                  # M: Page No
                     MANUAL_PDF_NAME,          # N: Manual Pdf Name
                     "",                       # O: Referance No 1
                     DEFAULT_UOM,              # P: Uom
@@ -138,12 +123,23 @@ def process_pdf_locally(pdf_path):
                     ""                        # U: Component Linking
                 ]
                 extracted_rows.append(row_data_arr)
+        else:
+            # === DRAWING PAGE ===
+            drwg_no, sub_component = extractor.find_drawing_and_subcomponent(ocr_results)
+            if drwg_no:
+                last_drwg_no = drwg_no
+            
+            # Always update sub_component for a new drawing page to prevent bleed-over from previous pages
+            last_sub_component = sub_component if sub_component else ""
+            
+            print(f"  [DRAWING PAGE] Drawing No: {last_drwg_no}, Sub-Component: {last_sub_component}")
                 
     doc.close()
     return extracted_rows
 
+
 def write_to_excel(extracted_rows, template_path, output_path):
-    print(f"Writing {len(extracted_rows)} rows to Excel...")
+    print(f"\nWriting {len(extracted_rows)} rows to Excel...")
     wb = openpyxl.load_workbook(template_path, keep_vba=True)
     sheet = wb.active
     
@@ -155,6 +151,7 @@ def write_to_excel(extracted_rows, template_path, output_path):
             
     wb.save(output_path)
     print(f"Saved Excel to {output_path}")
+
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
