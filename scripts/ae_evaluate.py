@@ -30,9 +30,6 @@ def evaluate():
     output_candidates = [
         "output/Auxiliary Engine 1_namecleaned.xlsm",
         "Auxiliary Engine 1_namecleaned.xlsm",
-        "output/Auxiliary Engine 1_extracted.xlsm",
-        "Auxiliary Engine 1_extracted.xlsm",
-        "output/Auxiliary Engine 1.xlsm",
     ]
     out_path = next((path for path in output_candidates if os.path.exists(path)), output_candidates[-1])
     

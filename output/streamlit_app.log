@@ -1,0 +1,63 @@
+2026-06-16 12:51:02,962 ERROR __main__: PDF extraction failed
+Traceback (most recent call last):
+  File "D:\OCRProject\app.py", line 178, in extraction_worker
+    result = run_extraction(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 759, in run_extraction
+    pipeline_name, runner_result = _run_route(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 703, in _run_route
+    raise UnsupportedPipeline(
+scripts.extraction_entrypoint.UnsupportedPipeline: No matching extraction pipeline was found for this PDF format. This file needs analysis before it can be extracted reliably.
+2026-06-16 12:51:39,067 ERROR __main__: PDF extraction failed
+Traceback (most recent call last):
+  File "D:\OCRProject\app.py", line 178, in extraction_worker
+    result = run_extraction(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 759, in run_extraction
+    pipeline_name, runner_result = _run_route(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 733, in _run_route
+    result = _run_test14(pdf_path, output_path, pages_to_process, cancel_check, progress_callback)
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 580, in _run_test14
+    module = _import_module("run_test14")
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 162, in _import_module
+    return importlib.import_module(module_name)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\OCRProject\scripts\run_test14.py", line 7, in <module>
+    import run_test9 as base
+  File "D:\OCRProject\scripts\run_test9.py", line 14, in <module>
+    from ocr_extractor import OCRExtractor
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 699, in _load_unlocked
+KeyError: 'ocr_extractor'
+2026-06-16 17:14:29,067 ERROR __main__: PDF extraction failed
+Traceback (most recent call last):
+  File "D:\OCRProject\app.py", line 181, in extraction_worker
+    result = run_extraction(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 804, in run_extraction
+    pipeline_name, runner_result = _run_route(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 736, in _run_route
+    result = _run_general(
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 674, in _run_general
+    general = _import_module("general_pipeline")
+  File "D:\OCRProject\scripts\extraction_entrypoint.py", line 162, in _import_module
+    return importlib.import_module(module_name)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\OCRProject\scripts\general_pipeline.py", line 46, in <module>
+    from ocr_extractor import OCRExtractor
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 699, in _load_unlocked
+KeyError: 'ocr_extractor'

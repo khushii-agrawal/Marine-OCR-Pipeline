@@ -1,28 +1,21 @@
-import os
-import sys
+from pathlib import Path
+import run_test12 as base
+from local_engine.ocr_extractor import OCRExtractor
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(script_dir, 'local_engine'))
-from pdf_converter import pdf_page_to_image
-from ocr_extractor import OCRExtractor
+PDF_PATH = Path(r"D:\OCRProject\test\Test16\your_pdf.pdf")
 
-def test_page():
-    pdf_path = os.path.join(script_dir, "..", "input", "AE D2842LE spare parts manual 1.pdf")
-    page_idx = 12  # page 13
-    img = pdf_page_to_image(pdf_path, page_idx, dpi=200)
-    
-    extractor = OCRExtractor()
-    ocr_results = extractor.extract_text(img)
-    page_height, page_width = img.shape[:2]
-    
-    print(f"Page dimensions: {page_width}x{page_height}")
-    for res in ocr_results:
-        box, (text, conf) = res
-        ys = [p[1] for p in box]
-        rel_y = ((min(ys) + max(ys)) / 2) / page_height
-        x_min = min(p[0] for p in box)
-        x_max = max(p[0] for p in box)
-        print(f"[{rel_y:.3f}] X:{x_min:.1f}-{x_max:.1f} | {text}")
+extractor = OCRExtractor()
 
-if __name__ == '__main__':
-    test_page()
+output_dir = Path("inspect_test16")
+output_dir.mkdir(exist_ok=True)
+
+for page_no in [1,3,5,8,11]:
+    items = base.ocr_items(PDF_PATH, page_no - 1, extractor)
+
+    with open(output_dir / f"page_{page_no}.txt", "w", encoding="utf-8") as f:
+        for item in sorted(items, key=lambda x: (x["rel_y0"], x["rel_x0"])):
+            f.write(
+                f"{item['rel_x0']:.3f}\t"
+                f"{item['rel_y0']:.3f}\t"
+                f"{item['text']}\n"
+            )

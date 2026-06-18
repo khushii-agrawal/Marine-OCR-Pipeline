@@ -9,7 +9,8 @@ import openpyxl
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-sys.path.append(str(SCRIPT_DIR / "local_engine"))
+if str(SCRIPT_DIR / "local_engine") not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR / "local_engine"))
 
 from ocr_extractor import OCRExtractor
 from pdf_converter import pdf_page_to_image
