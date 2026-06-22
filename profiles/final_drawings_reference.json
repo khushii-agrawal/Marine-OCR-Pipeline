@@ -1,0 +1,24 @@
+{
+  "profile_id": "final_drawings_reference",
+  "manufacturer": "",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "column_assumptions": {
+    "drawing_ref_aliases": ["DRAWING", "REF", "PAGE"],
+    "description_aliases": ["DESCRIPTION", "NAME"],
+    "position_aliases": ["POS", "ITEM"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test3.py",
+      "fixture_id": "test3_final_drawings_reference",
+      "component": "",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "FINAL DRAWINGS Pg No 69-197.pdf",
+      "known_layouts": ["drawing_title_block"],
+      "future_strategy": ["DrawingTitleBlockStrategy"],
+      "notes": "Current runner copies rows from the known-good reference workbook rather than parsing the PDF."
+    }
+  ]
+}

@@ -1,18 +1,20 @@
 import os
 os.environ["FLAGS_enable_pir_api"] = "0"
 os.environ["FLAGS_use_mkldnn"] = "0"
+import logging
 import re
 from typing import Dict, Any, List, Tuple
 from paddleocr import PaddleOCR
 import numpy as np
+
+logging.getLogger("ppocr").setLevel(logging.ERROR)
 
 class OCRExtractor:
     def __init__(self, lang='en', use_angle_cls=True):
         """
         Initializes the PaddleOCR engine.
         """
-        # Set show_log=False to prevent PaddleOCR from printing too much to the console
-        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang, show_log=False)
+        self.ocr = PaddleOCR(use_angle_cls=use_angle_cls, lang=lang)
         
     def extract_text(self, image: np.ndarray) -> List[Tuple[List[List[float]], Tuple[str, float]]]:
         """

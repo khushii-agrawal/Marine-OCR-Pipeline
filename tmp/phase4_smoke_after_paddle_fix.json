@@ -1,0 +1,163 @@
+{
+  "files": [
+    {
+      "pdf": "tests\\fixtures\\accessory_kit_equipment_list\\test14.pdf",
+      "manufacturer": "obp_mooring_winches_windlass",
+      "layout": "accessory_kit_equipment_list",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\accessory_kit_equipment_list\\test4.pdf",
+      "manufacturer": "FURUNO ELECTRIC CO LTD",
+      "layout": "accessory_kit_equipment_list",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\drawing_material_list\\test13.pdf",
+      "manufacturer": "NANIWA PUMP MFG.CO.,LTD.",
+      "layout": "drawing_material_list",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\drawing_material_list\\test15.pdf",
+      "manufacturer": "HYDROWEGA HOLLAND B.V.",
+      "layout": "drawing_material_list",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\drawing_material_list\\test16.pdf",
+      "manufacturer": "CARRIER",
+      "layout": "drawing_material_list",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\drawing_material_list\\test17.pdf",
+      "manufacturer": "MAN",
+      "layout": "drawing_material_list",
+      "status": "ok",
+      "records": 3,
+      "tiers": {
+        "Low": 3
+      }
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test1.pdf",
+      "manufacturer": "main_distribution_board",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test10.pdf",
+      "manufacturer": "SHANGHAI HENGYUAN MARINE EQUIPMENT CO LTD",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test11.pdf",
+      "manufacturer": "SHANGHAI HENGYUAN MARINE EQUIPMENT CO LTD",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test12.pdf",
+      "manufacturer": "NANIWA PUMP MFG.CO.,LTD.",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test18.pdf",
+      "manufacturer": "main_engine_accessories_multi_vendor",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test19.pdf",
+      "manufacturer": "BUKH",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test5.pdf",
+      "manufacturer": "MAN B&W",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 43,
+      "tiers": {
+        "High": 43
+      }
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test6.pdf",
+      "manufacturer": "MAN B&W",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test7.pdf",
+      "manufacturer": "MAN B&W",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test8.pdf",
+      "manufacturer": "MAN B&W",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 1,
+      "tiers": {
+        "High": 1
+      }
+    },
+    {
+      "pdf": "tests\\fixtures\\standard_parts_table\\test9.pdf",
+      "manufacturer": "obp_mooring_winches_windlass",
+      "layout": "standard_parts_table",
+      "status": "ok",
+      "records": 0,
+      "tiers": {}
+    }
+  ],
+  "manufacturers": {
+    "obp_mooring_winches_windlass": {},
+    "FURUNO ELECTRIC CO LTD": {},
+    "NANIWA PUMP MFG.CO.,LTD.": {},
+    "HYDROWEGA HOLLAND B.V.": {},
+    "CARRIER": {},
+    "MAN": {
+      "Low": 3
+    },
+    "main_distribution_board": {},
+    "SHANGHAI HENGYUAN MARINE EQUIPMENT CO LTD": {},
+    "main_engine_accessories_multi_vendor": {},
+    "BUKH": {},
+    "MAN B&W": {
+      "High": 44
+    }
+  }
+}

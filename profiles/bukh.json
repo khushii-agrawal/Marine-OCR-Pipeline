@@ -1,0 +1,25 @@
+{
+  "profile_id": "bukh",
+  "manufacturer": "BUKH",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{3}[A-Z]\\d{4}$",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO", "ITEM NO", "CODE"],
+    "description_aliases": ["DESCRIPTION", "DESIGNATION", "SPARE PART"],
+    "qty_aliases": ["QTY"],
+    "position_aliases": ["POS", "ITEM"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test19.py",
+      "fixture_id": "test19_life_boat_bukh_diesel",
+      "component": "Life Boat Spares",
+      "sub_component": "BUKH Diesel Engine Spare Parts",
+      "model": "DV 36/48",
+      "manual_pdf_name": "Life boat spares 1 (1).pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy"]
+    }
+  ]
+}

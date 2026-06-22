@@ -1,0 +1,37 @@
+{
+  "profile_id": "main_distribution_board",
+  "manufacturer": "",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^[A-Z0-9][A-Z0-9/-]{2,}(?:\\s+[A-Z0-9]+)?$",
+  "column_assumptions": {
+    "part_no_aliases": ["TYPE", "CODE", "PART NO"],
+    "description_aliases": ["DESCRIPTION", "NAME", "ITEM"],
+    "qty_aliases": ["QTY"],
+    "drawing_ref_aliases": ["DRAWING PAGE", "REF"],
+    "position_aliases": ["POS", "ITEM"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test1.py",
+      "fixture_id": "test1_main_distribution_board",
+      "component": "Main Distribution Board 3X230V",
+      "sub_component": "Main Distribution Board 3X230V",
+      "model": "",
+      "manual_pdf_name": "23000143 11L REV 1 AS BUILT 5-12-2013.pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_title_block"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingTitleBlockStrategy"]
+    },
+    {
+      "source_script": null,
+      "fixture_id": "test2_distribution_board_fixture_only",
+      "component": "",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "23000143 12EP REV 1 AS BUILT 5-12-2013 Pg No 45-54 .pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_title_block"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingTitleBlockStrategy"],
+      "notes": "Fixture exists, but no scripts/run_test2.py was found in this checkout."
+    }
+  ]
+}

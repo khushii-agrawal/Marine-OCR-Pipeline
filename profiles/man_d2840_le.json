@@ -1,0 +1,25 @@
+{
+  "profile_id": "man_d2840_le",
+  "manufacturer": "MAN",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{2}\\.\\d{5}[-.]\\d{3,5}$",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO", "ITEM NO", "ORDER NO"],
+    "description_aliases": ["DESCRIPTION", "DESIGNATION"],
+    "position_aliases": ["POS", "POS."],
+    "details_aliases": ["DETAILS", "SIZE", "DIMENSION"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test17.py",
+      "fixture_id": "test17_emergency_diesel_engine",
+      "component": "Emergency diesel engine",
+      "sub_component": "",
+      "model": "D 2840 LE",
+      "manual_pdf_name": "Emergency diesel engine 1 1.pdf",
+      "known_layouts": ["drawing_material_list"],
+      "future_strategy": ["DrawingMaterialListStrategy"]
+    }
+  ]
+}

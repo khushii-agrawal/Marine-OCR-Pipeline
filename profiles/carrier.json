@@ -1,0 +1,25 @@
+{
+  "profile_id": "carrier",
+  "manufacturer": "CARRIER",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO", "PART NUMBER", "NO."],
+    "description_aliases": ["DESCRIPTION", "NAME"],
+    "qty_aliases": ["QTY"],
+    "position_aliases": ["ITEM", "POS"],
+    "drawing_ref_aliases": ["FIGURE", "CHART"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test16.py",
+      "fixture_id": "test16_carrier_5h_blowup_diagram",
+      "component": "Compressor/Condensing Units",
+      "sub_component": "",
+      "model": "5H Freon",
+      "manual_pdf_name": "5H _blowUpDiagram (1).pdf",
+      "known_layouts": ["drawing_material_list", "matrix_cross_reference"],
+      "future_strategy": ["DrawingMaterialListStrategy", "MatrixCrossReferenceStrategy"]
+    }
+  ]
+}
