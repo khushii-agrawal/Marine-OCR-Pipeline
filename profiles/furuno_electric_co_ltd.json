@@ -1,0 +1,25 @@
+{
+  "profile_id": "furuno_electric_co_ltd",
+  "manufacturer": "FURUNO ELECTRIC CO LTD",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "column_assumptions": {
+    "part_no_aliases": ["CODE", "TYPE", "REF.NO.", "REF. NO."],
+    "description_aliases": ["NAME", "ITEM", "DESCRIPTION"],
+    "qty_aliases": ["QTY", "QUANTITY"],
+    "remarks_aliases": ["REMARKS"],
+    "drawing_ref_aliases": ["REF.NO.", "DRAWING"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test4.py",
+      "fixture_id": "test4_furuno_far2xx8_radar",
+      "component": "Marine Radar",
+      "sub_component": "Marine Radar",
+      "model": "",
+      "manual_pdf_name": "IME36520W_FAR2xx8.pdf",
+      "known_layouts": ["accessory_kit_equipment_list", "drawing_title_block"],
+      "future_strategy": ["AccessoryKitListStrategy", "DrawingTitleBlockStrategy"]
+    }
+  ]
+}

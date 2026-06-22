@@ -1,0 +1,35 @@
+{
+  "profile_id": "shanghai_hengyuan_marine_equipment",
+  "manufacturer": "SHANGHAI HENGYUAN MARINE EQUIPMENT CO LTD",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{4}-[A-Z0-9]{3}$",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO.", "PART NO", "NO."],
+    "description_aliases": ["NAME", "DESCRIPTION", "FAN SPARE LIST"],
+    "qty_aliases": ["QTY", "QUANTITY"],
+    "drawing_ref_aliases": ["DRAWING NO.", "DWG. NO."]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test10.py",
+      "fixture_id": "test10_cargo_area_fans",
+      "component": "Cargo Area Fans",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "V-202-V0000004-cargo area fans-Rev.1.1.pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy"]
+    },
+    {
+      "source_script": "scripts/run_test11.py",
+      "fixture_id": "test11_accommodation_fans",
+      "component": "Accommodation Fans",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "V-203-V0000015-accommodation fans-Rev.1.1.pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy"]
+    }
+  ]
+}

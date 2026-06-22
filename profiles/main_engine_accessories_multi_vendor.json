@@ -1,0 +1,27 @@
+{
+  "profile_id": "main_engine_accessories_multi_vendor",
+  "manufacturer": "",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d+(?:\\.\\d+){2,5}$",
+  "vendors_detected_in_script": ["PLEIGER", "EDUR", "BOLL & KIRCH", "PRANG"],
+  "column_assumptions": {
+    "part_no_aliases": ["BESTELL-NR.", "ORDER-NO.", "IDENTNR", "CODE NO", "PT.-NO"],
+    "description_aliases": ["BEZEICHNUNG", "DESIGNATION", "IDENTITY", "NAME"],
+    "qty_aliases": ["STCK.", "QTY", "QUANTITY"],
+    "position_aliases": ["POS", "POS.-NR.", "ITEM-NO."],
+    "material_aliases": ["MATERIAL"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test18.py",
+      "fixture_id": "test18_main_engine_accessories",
+      "component": "Main Engine Accessories",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "Extracted pages from Main engine assessories (1).pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list", "matrix_cross_reference", "drawing_title_block"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy", "MatrixCrossReferenceStrategy", "DrawingTitleBlockStrategy"]
+    }
+  ]
+}

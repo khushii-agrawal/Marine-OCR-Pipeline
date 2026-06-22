@@ -1,0 +1,36 @@
+{
+  "profile_id": "naniwa_pump_mfg_co_ltd",
+  "manufacturer": "NANIWA PUMP MFG.CO.,LTD.",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{1,4}$",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO.", "PART NO", "DWG. NO.", "DRAWING NO.", "CODE"],
+    "description_aliases": ["DESCRIPTION", "NAME OF PART", "PART NAME", "DESIGNATION"],
+    "qty_aliases": ["QTY", "Q'TY", "QUANTITY", "SETS"],
+    "material_aliases": ["MATERIAL"],
+    "drawing_ref_aliases": ["DRAWING NO.", "DWG. NO.", "NO."]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test12.py",
+      "fixture_id": "test12_positive_displacement_pump",
+      "component": "Positive Displacement Pump",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "M-213-M0000012-Positive Displacement Pump-1 REV1.1 (2).pdf",
+      "known_layouts": ["standard_spare_parts_table", "accessory_kit_equipment_list", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "AccessoryKitListStrategy", "DrawingMaterialListStrategy"]
+    },
+    {
+      "source_script": "scripts/run_test13.py",
+      "fixture_id": "test13_centrifugal_pump",
+      "component": "Centrifugal Pump",
+      "sub_component": "",
+      "model": "",
+      "manual_pdf_name": "M-212-M0000011-Centrifugal Pump REV1.1 (3).pdf",
+      "known_layouts": ["standard_spare_parts_table", "accessory_kit_equipment_list", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "AccessoryKitListStrategy", "DrawingMaterialListStrategy"]
+    }
+  ]
+}

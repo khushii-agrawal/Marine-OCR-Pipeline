@@ -1,0 +1,31 @@
+{
+  "profile_id": "man_bw_main_engine",
+  "manufacturer": "MAN B&W",
+  "default_unit": "PCS",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{3}\\.\\d{2}\\.(?:\\d{3}|[A-Z]{1,4})$",
+  "known_ocr_substitutions": {
+    "O": "0",
+    "I": "1",
+    "S": "5"
+  },
+  "column_assumptions": {
+    "part_no_aliases": ["BESTELL-NR", "ORDER NO", "NO.", "ORDER"],
+    "description_aliases": ["BENENNUNG", "DESIGNATION", "DESIGNACION"],
+    "qty_aliases": ["QTY", "QUANTITY"],
+    "position_aliases": ["POS", "POS."],
+    "drawing_ref_aliases": ["TABLE", "FIGURE", "BILD", "FIGURA"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test6.py",
+      "fixture_id": "test6_man_bw_spares_catalogue",
+      "component": "Main Engine",
+      "sub_component": "",
+      "model": "L 40/45",
+      "manual_pdf_name": "Extracted pages from MAN B&W SPARES PARTS CATALOGUE.pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list", "matrix_cross_reference"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy", "MatrixCrossReferenceStrategy"]
+    }
+  ]
+}

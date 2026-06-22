@@ -1,0 +1,46 @@
+{
+  "profile_id": "man_bw_auxiliary_engine",
+  "manufacturer": "MAN B&W",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "part_no_pattern": "^\\d{2}\\.\\d{5}[-.]\\d{3,5}$",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NO", "PART NO.", "ORDER NO"],
+    "description_aliases": ["DESCRIPTION", "DESIGNATION", "ENGLISH"],
+    "qty_aliases": ["QTY", "QUANTITY"],
+    "position_aliases": ["POS", "POS."],
+    "table_ref_aliases": ["TABLE", "ELTIS", "#"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test5.py",
+      "fixture_id": "test5_ae_d2842le_dci",
+      "component": "Auxiliary Engine",
+      "sub_component": "",
+      "model": "D2842LE",
+      "manual_pdf_name": "Extracted pages from DCI DR 12 & 14 AE PARTS CAT D2842LE ESN 49361860994101.pdf",
+      "known_layouts": ["standard_spare_parts_table"],
+      "future_strategy": ["StandardPartsTableStrategy"]
+    },
+    {
+      "source_script": "scripts/run_test7.py",
+      "fixture_id": "test7_auxiliary_engine_spare_parts_1",
+      "component": "Auxiliary Engine",
+      "sub_component": "",
+      "model": "D2842LE",
+      "manual_pdf_name": "Auxiliary engine spare parts 1.pdf",
+      "known_layouts": ["standard_spare_parts_table"],
+      "future_strategy": ["StandardPartsTableStrategy"]
+    },
+    {
+      "source_script": "scripts/run_test8.py",
+      "fixture_id": "test8_auxiliary_engine_spare_parts_2",
+      "component": "Auxiliary Engine",
+      "sub_component": "",
+      "model": "D2842LE",
+      "manual_pdf_name": "Auxiliary engine spare parts 2 1.pdf",
+      "known_layouts": ["standard_spare_parts_table"],
+      "future_strategy": ["StandardPartsTableStrategy"]
+    }
+  ]
+}

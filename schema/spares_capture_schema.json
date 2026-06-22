@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marine-ocr-pipeline.local/schema/spares_capture_schema.json",
+  "title": "Spares Capture Part Record",
+  "description": "Canonical output record for marine spare-parts extraction.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "part_no": {
+      "type": "string",
+      "required": true,
+      "description": "Manufacturer part number, order number, ident number, code number, or equivalent."
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "description": "Canonical spare-part name or description."
+    },
+    "qty": {
+      "type": "string",
+      "required": false,
+      "description": "Quantity as written in the source document."
+    },
+    "unit": {
+      "type": "string",
+      "required": false,
+      "description": "Unit of measure, such as Pcs, Set, or PCS."
+    },
+    "drawing_ref": {
+      "type": "string",
+      "required": false,
+      "description": "Drawing number, reference number, table number, or figure reference."
+    },
+    "component": {
+      "type": "string",
+      "required": true,
+      "description": "Top-level component name from the extraction profile."
+    },
+    "sub_component": {
+      "type": "string",
+      "required": false,
+      "description": "Subcomponent, table title, assembly, group, or page-level section."
+    },
+    "manufacturer": {
+      "type": "string",
+      "required": false,
+      "description": "Manufacturer name from the extraction profile or detected source metadata."
+    },
+    "model": {
+      "type": "string",
+      "required": false,
+      "description": "Equipment model, engine model, pump model, or source-specific model text."
+    }
+  },
+  "required": [
+    "part_no",
+    "description",
+    "component"
+  ]
+}

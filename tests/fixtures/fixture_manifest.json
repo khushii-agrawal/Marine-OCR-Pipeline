@@ -1,0 +1,2547 @@
+{
+  "version": 1,
+  "description": "Phase 1 regression fixture manifest. Source files are referenced in place; originals have not been moved or deleted.",
+  "layout_roots": {
+    "standard_spare_parts_table": "tests/fixtures/standard_parts_table",
+    "drawing_material_list": "tests/fixtures/drawing_material_list",
+    "drawing_title_block": "tests/fixtures/drawing_title_block",
+    "matrix_cross_reference": "tests/fixtures/matrix_cross_reference",
+    "accessory_kit_equipment_list": "tests/fixtures/accessory_kit_equipment_list"
+  },
+  "fixtures": [
+    {
+      "fixture_id": "test1_main_distribution_board",
+      "source_script": "scripts/run_test1.py",
+      "profile": "profiles/main_distribution_board.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_title_block"
+      ],
+      "pdf": "Test/Test 1/23000143 11L REV 1 AS BUILT 5-12-2013 Pg No 47-53.pdf",
+      "known_good_outputs": [
+        "Test/Test 1/23000143 11L REV 1 AS BUILT 5-12-2013.xlsm",
+        "output/Test1_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "electrical drawing/manual page"
+        },
+        {
+          "pages": "2-3",
+          "layout": "index_page",
+          "confidence": "high",
+          "reason": "table of contents pages"
+        },
+        {
+          "pages": "4-46",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "electrical drawing/manual page"
+        },
+        {
+          "pages": "47-51",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "52-53",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "electrical drawing/manual page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test2_distribution_board_fixture_only",
+      "source_script": null,
+      "profile": "profiles/main_distribution_board.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_title_block"
+      ],
+      "pdf": "Test/Test 2/23000143 12EP REV 1 AS BUILT 5-12-2013 Pg No 45-54 .pdf",
+      "known_good_outputs": [
+        "Test/Test 2/23000143 12EP REV 1 AS BUILT 5-12-2013.xlsx",
+        "output/Test2_extracted.xlsm"
+      ],
+      "notes": "Fixture exists, but scripts/run_test2.py is not present in this checkout.",
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "electrical drawing/manual page"
+        },
+        {
+          "pages": "2-3",
+          "layout": "index_page",
+          "confidence": "high",
+          "reason": "table of contents pages"
+        },
+        {
+          "pages": "4-44",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "electrical drawing/manual page"
+        },
+        {
+          "pages": "45-54",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test3_final_drawings_reference",
+      "source_script": "scripts/run_test3.py",
+      "profile": "profiles/final_drawings_reference.json",
+      "primary_layout": "drawing_title_block",
+      "secondary_layouts": [],
+      "pdf": "Test/Test 3/FINAL DRAWINGS Pg No 69-197.pdf",
+      "known_good_outputs": [
+        "Test/Test 3/FINAL DRAWINGS.xlsm",
+        "output/Test3_pages_69_197_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-781",
+          "layout": "drawing_only",
+          "confidence": "high",
+          "reason": "reference drawing/title-block pages"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test4_furuno_far2xx8_radar",
+      "source_script": "scripts/run_test4.py",
+      "profile": "profiles/furuno_electric_co_ltd.json",
+      "primary_layout": "accessory_kit_equipment_list",
+      "secondary_layouts": [
+        "drawing_title_block"
+      ],
+      "pdf": "Test/Test 4/IME36520W_FAR2xx8 pg No 18-29,132,197-215.pdf",
+      "known_good_outputs": [
+        "Test/Test 4/IME36520W_FAR2xx8.pdf.xlsx",
+        "output/Test4_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-17",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "installation/instruction/drawing page"
+        },
+        {
+          "pages": "18-29",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "equipment list pages from runner"
+        },
+        {
+          "pages": "30-131",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "installation/instruction/drawing page"
+        },
+        {
+          "pages": "132",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "equipment list page from runner"
+        },
+        {
+          "pages": "133-166",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "installation/instruction/drawing page"
+        },
+        {
+          "pages": "167-169",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "input/output data reference tables"
+        },
+        {
+          "pages": "170-196",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "installation/instruction/drawing page"
+        },
+        {
+          "pages": "197-215",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "packing list pages from runner"
+        },
+        {
+          "pages": "216-260",
+          "layout": "drawing_only",
+          "confidence": "high",
+          "reason": "drawing pages from runner"
+        },
+        {
+          "pages": "261-274",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "installation/instruction/drawing page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test5_ae_d2842le_dci",
+      "source_script": "scripts/run_test5.py",
+      "profile": "profiles/man_bw_auxiliary_engine.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [],
+      "pdf": "Test/Test 5/Extracted pages from DCI DR 12 & 14 AE PARTS CAT D2842LE ESN 49361860994101.pdf",
+      "known_good_outputs": [
+        "output/Test5_AE_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-89",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output on every page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test6_man_bw_spares_catalogue",
+      "source_script": "scripts/run_test6.py",
+      "profile": "profiles/man_bw_main_engine.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list",
+        "matrix_cross_reference"
+      ],
+      "pdf": "Test/Test 6/Extracted pages from MAN B&W SPARES PARTS CATALOGUE.pdf",
+      "known_good_outputs": [
+        "output/Test6_MAN_BW_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-4",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "5",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "6-8",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "9",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "10",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "11",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "12-14",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "15",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "16",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "17",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "18",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "19",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "20-21",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "22",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "23",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "24",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "25",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "26",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "27-28",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "29",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "30",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "31",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "32",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "33",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "34-35",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "36",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "37",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "38-39",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "40",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "41",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "42-44",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "45",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "46-48",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "49",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "50",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "51",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "52",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "53",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "54",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "55",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "56",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "57",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "58",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "59-61",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "62",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "63",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "64-86",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "87",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "88",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "89",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "90-91",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "92",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "93",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "94",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "95",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "96-97",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "98-101",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "102",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "103-105",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "106",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "107",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "108",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "109",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "110",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "111-112",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "113",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "114-115",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "116",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "117-118",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "119",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "120",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "121",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "122",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "123",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "124",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "125",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "126-127",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "128",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "129",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "130-133",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "134",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "135",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "cross-reference/list table candidate"
+        },
+        {
+          "pages": "136-140",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "141-143",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "144",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "145",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "146",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "147",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "148",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "149-150",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "151",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "152-153",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "154-155",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "156",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "157",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "158",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "159-165",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "166-178",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "179-181",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "182",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "183-186",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        },
+        {
+          "pages": "187-188",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "189-191",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "MAN catalogue drawing/list page default"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test7_auxiliary_engine_spare_parts_1",
+      "source_script": "scripts/run_test7.py",
+      "profile": "profiles/man_bw_auxiliary_engine.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [],
+      "pdf": "Test/Test 7/Auxiliary engine spare parts 1.pdf",
+      "known_good_outputs": [
+        "output/Test7_AE_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "cover/title page"
+        },
+        {
+          "pages": "2-4",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "contents/index table pages"
+        },
+        {
+          "pages": "5",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "exploded drawing page"
+        },
+        {
+          "pages": "6-8",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "9",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "10-12",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "13",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "14",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "15",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "16-17",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "18",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "19-21",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "22-23",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "24-30",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "31",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "32",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "33",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "34-35",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "36",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "37-38",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "39",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "40-42",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "43-44",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "45-48",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "49-50",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "51-57",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "58-59",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "60-62",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test8_auxiliary_engine_spare_parts_2",
+      "source_script": "scripts/run_test8.py",
+      "profile": "profiles/man_bw_auxiliary_engine.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [],
+      "pdf": "Test/Test 8/Auxiliary engine spare parts 2 1.pdf",
+      "known_good_outputs": [
+        "output/Test8_AE_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "2-4",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "5",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "6",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "7",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "8-9",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "10",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "11-13",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "14",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "15-17",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "18",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "19-20",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "21",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "22-43",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "44",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "45-51",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "52",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "53-81",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "82",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "83-114",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "115",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "116-117",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "118",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "119-125",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "126",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "127-138",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "139",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "140-156",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "157",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "158-185",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "186",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "187-202",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "203",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "auxiliary-engine drawing/table default"
+        },
+        {
+          "pages": "204-216",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test9_obp_spare_full_list",
+      "source_script": "scripts/run_test9.py",
+      "profile": "profiles/obp_mooring_winches_windlass.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list",
+        "accessory_kit_equipment_list"
+      ],
+      "pdf": "Test/Test 9/13k obp spare - full list rev 4 (2) (1).pdf",
+      "known_good_outputs": [
+        "output/Test9_OBP_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-7",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "8",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "blank/section/default page"
+        },
+        {
+          "pages": "9-12",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "13",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "blank/section/default page"
+        },
+        {
+          "pages": "14",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        },
+        {
+          "pages": "15",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "blank/section/default page"
+        },
+        {
+          "pages": "16-34",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "known-good output rows"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test10_cargo_area_fans",
+      "source_script": "scripts/run_test10.py",
+      "profile": "profiles/shanghai_hengyuan_marine_equipment.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list"
+      ],
+      "pdf": "Test/Test 10/V-202-V0000004-cargo area fans-Rev.1.1.pdf",
+      "known_good_outputs": [
+        "output/Test10_Cargo_Area_Fans_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-8",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "fan spare-list output pages"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test11_accommodation_fans",
+      "source_script": "scripts/run_test11.py",
+      "profile": "profiles/shanghai_hengyuan_marine_equipment.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list"
+      ],
+      "pdf": "Test/Test 11/V-203-V0000015-accommodation fans-Rev.1.1.pdf",
+      "known_good_outputs": [
+        "output/Test11_Accommodation_Fans_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-14",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "fan spare-list output pages"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test12_positive_displacement_pump",
+      "source_script": "scripts/run_test12.py",
+      "profile": "profiles/naniwa_pump_mfg_co_ltd.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "accessory_kit_equipment_list",
+        "drawing_material_list"
+      ],
+      "pdf": "Test/Test 12/M-213-M0000012-Positive Displacement Pump-1 REV1.1 (2).pdf",
+      "known_good_outputs": [
+        "output/Test12_Positive_Displacement_Pump_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-2",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "3",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "4-5",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "6",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "7-8",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "9",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "10-13",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "14",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "15-16",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "17",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "18-19",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "20",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "21-22",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        },
+        {
+          "pages": "23",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "compact spare-parts list page"
+        },
+        {
+          "pages": "24",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "NANIWA drawing/material pages"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test13_centrifugal_pump",
+      "source_script": "scripts/run_test13.py",
+      "profile": "profiles/naniwa_pump_mfg_co_ltd.json",
+      "primary_layout": "drawing_material_list",
+      "secondary_layouts": [
+        "standard_spare_parts_table",
+        "accessory_kit_equipment_list"
+      ],
+      "pdf": "Test/Test 13/M-212-M0000011-Centrifugal Pump REV1.1 (3).pdf",
+      "known_good_outputs": [
+        "output/Test13_Centrifugal_Pump_extracted.xlsm",
+        "output/Test13_Centrifugal_Pump_extracted_fallback.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-3",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "unused/cover/default page"
+        },
+        {
+          "pages": "4",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "ACCESSORIES FOR EACH 1 PUMP"
+        },
+        {
+          "pages": "5-82",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "pump material/section/spare list pages from runner"
+        },
+        {
+          "pages": "83-129",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "unused/cover/default page"
+        },
+        {
+          "pages": "130",
+          "layout": "drawing_material_list",
+          "confidence": "medium",
+          "reason": "runner explicit material page"
+        },
+        {
+          "pages": "131-152",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "unused/cover/default page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test14_obp_spare_full_list",
+      "source_script": "scripts/run_test14.py",
+      "profile": "profiles/obp_mooring_winches_windlass.json",
+      "primary_layout": "accessory_kit_equipment_list",
+      "secondary_layouts": [
+        "standard_spare_parts_table"
+      ],
+      "pdf": "Test/Test 14/13k obp spare - full list rev 4 (2) (1) (1).pdf",
+      "known_good_outputs": [
+        "output/Test14_OBP_spares_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "2-4",
+          "layout": "index_page",
+          "confidence": "high",
+          "reason": "content pages"
+        },
+        {
+          "pages": "5-7",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "8-9",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "10",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "11-12",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "13",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "14",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "15",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "16-19",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "20",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "21",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "22",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "23",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "24",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "25",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "26",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "27",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "28-29",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "30",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "31",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "32",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "33",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "34",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "35",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "36",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "37",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "38",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "front OBP spare table page"
+        },
+        {
+          "pages": "39-83",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "84",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "85",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "86",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "87",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "88",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "89",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "90",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "91",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "92",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "93",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "94",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "95",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "96",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "97",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "98",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "99",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "100",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "101",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "102",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "103",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "104",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "105",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "106",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "107",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "108-113",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "114",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "115-121",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "122",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "123",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "124",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "125",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "126",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "127",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "128",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "129",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "130",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "131",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "132-133",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "134",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "135",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "136",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "137",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "138",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "139",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "140",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "141",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "142",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "143",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "144",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "145",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "146",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "147",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "148",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "149",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        },
+        {
+          "pages": "150",
+          "layout": "repair_kit",
+          "confidence": "high",
+          "reason": "known-good OBP spare/kit output rows"
+        },
+        {
+          "pages": "151-155",
+          "layout": "drawing_only",
+          "confidence": "low",
+          "reason": "cover/section/default page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test15_hydraulic_winch",
+      "source_script": "scripts/run_test15.py",
+      "profile": "profiles/hydrowega_holland_bv.json",
+      "primary_layout": "drawing_material_list",
+      "secondary_layouts": [
+        "standard_spare_parts_table"
+      ],
+      "pdf": "Test/Test 15/Extracted pages from Hydraulic winch.pdf",
+      "known_good_outputs": [],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "2",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "3-4",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "5",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "6",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "7",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "8",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "9",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "10",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "11",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "12-13",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "14",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "15",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "16",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "17-18",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "19-20",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "21",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "22",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "23",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "24",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "25",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "26-27",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "28",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "29",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "30",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "31",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "32",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "33",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "34",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "35",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "36",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "37",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "38",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "39",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "40",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "41",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "42",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "43",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "44",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "45",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "46",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "47",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "48",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "49",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "50",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        },
+        {
+          "pages": "51",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Hydrowega drawing/material page"
+        },
+        {
+          "pages": "52",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Hydrowega parts-list table page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test16_carrier_5h_blowup_diagram",
+      "source_script": "scripts/run_test16.py",
+      "profile": "profiles/carrier.json",
+      "primary_layout": "drawing_material_list",
+      "secondary_layouts": [
+        "matrix_cross_reference"
+      ],
+      "pdf": "Test/Test 16/5H _blowUpDiagram (1).pdf",
+      "known_good_outputs": [],
+      "page_labels": [
+        {
+          "pages": "1",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Carrier exploded drawing page"
+        },
+        {
+          "pages": "2-16",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "Carrier chart/history/cross-reference page"
+        },
+        {
+          "pages": "17",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Carrier exploded drawing page"
+        },
+        {
+          "pages": "18",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "Carrier chart/history/cross-reference page"
+        },
+        {
+          "pages": "19",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "Carrier exploded drawing page"
+        },
+        {
+          "pages": "20-36",
+          "layout": "index_page",
+          "confidence": "medium",
+          "reason": "Carrier chart/history/cross-reference page"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test17_emergency_diesel_engine",
+      "source_script": "scripts/run_test17.py",
+      "profile": "profiles/man_d2840_le.json",
+      "primary_layout": "drawing_material_list",
+      "secondary_layouts": [],
+      "pdf": "Test/Test 17/Emergency diesel engine 1 1.pdf",
+      "known_good_outputs": [
+        "output/Test17_Emergency_diesel_engine_extracted.xlsm",
+        "Test17_Emergency_diesel_engine_pages9_181.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-8",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "front/non-extraction pages"
+        },
+        {
+          "pages": "9-181",
+          "layout": "drawing_material_list",
+          "confidence": "high",
+          "reason": "emergency diesel drawing/material extraction range"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test18_main_engine_accessories",
+      "source_script": "scripts/run_test18.py",
+      "profile": "profiles/main_engine_accessories_multi_vendor.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list",
+        "matrix_cross_reference",
+        "drawing_title_block"
+      ],
+      "pdf": "Test/Test 18/Extracted pages from Main engine assessories (1).pdf",
+      "known_good_outputs": [
+        "Test18_Main_engine_accessories_extracted.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-4",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "dimension/spec/drawing pages audited"
+        },
+        {
+          "pages": "5-7",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Pleiger spare list pages"
+        },
+        {
+          "pages": "8-9",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "drawing/title pages audited"
+        },
+        {
+          "pages": "10-13",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Pleiger spare list pages"
+        },
+        {
+          "pages": "14",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "drawing page audited"
+        },
+        {
+          "pages": "15-26",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Pleiger spare/annex list pages"
+        },
+        {
+          "pages": "27",
+          "layout": "repair_kit",
+          "confidence": "medium",
+          "reason": "heat exchanger embedded list of parts"
+        },
+        {
+          "pages": "28",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "EDUR section drawing"
+        },
+        {
+          "pages": "29-55",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "EDUR/Boll standard parts list pages"
+        },
+        {
+          "pages": "56-58",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "Boll spec/drawing pages"
+        },
+        {
+          "pages": "59-60",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "EDUR/Boll standard parts list pages"
+        },
+        {
+          "pages": "61-62",
+          "layout": "index_page",
+          "confidence": "high",
+          "reason": "rotated Boll matrix/cross-reference list"
+        },
+        {
+          "pages": "63-75",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Boll parts list pages"
+        },
+        {
+          "pages": "76-77",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "drawing-only pages audited"
+        },
+        {
+          "pages": "78-84",
+          "layout": "index_page",
+          "confidence": "high",
+          "reason": "Boll NW matrix pages"
+        },
+        {
+          "pages": "85-88",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "Boll list pages"
+        },
+        {
+          "pages": "89-90",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "spec/drawing pages audited"
+        }
+      ]
+    },
+    {
+      "fixture_id": "test19_life_boat_bukh_diesel",
+      "source_script": "scripts/run_test19.py",
+      "profile": "profiles/bukh.json",
+      "primary_layout": "standard_spare_parts_table",
+      "secondary_layouts": [
+        "drawing_material_list"
+      ],
+      "pdf": "Test/Test 19/Life boat spares 1 (1).pdf",
+      "known_good_outputs": [
+        "Test19_Life_boat_spares_pages3_39_v2.xlsm"
+      ],
+      "page_labels": [
+        {
+          "pages": "1-2",
+          "layout": "drawing_only",
+          "confidence": "medium",
+          "reason": "front/non-extraction pages"
+        },
+        {
+          "pages": "3-39",
+          "layout": "spare_parts_table",
+          "confidence": "high",
+          "reason": "BUKH spare-parts pages"
+        }
+      ]
+    }
+  ]
+}

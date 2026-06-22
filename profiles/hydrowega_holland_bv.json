@@ -1,0 +1,24 @@
+{
+  "profile_id": "hydrowega_holland_bv",
+  "manufacturer": "HYDROWEGA HOLLAND B.V.",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "column_assumptions": {
+    "part_no_aliases": ["ARTIKELNR", "PART NO", "CODE"],
+    "description_aliases": ["BENAMING", "DESCRIPTION", "DISTINTA"],
+    "qty_aliases": ["AANTAL", "QTY"],
+    "position_aliases": ["POS", "ITEM"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test15.py",
+      "fixture_id": "test15_hydraulic_winch",
+      "component": "Hydraulic Winch",
+      "sub_component": "",
+      "model": "Draghead Winch",
+      "manual_pdf_name": "Extracted pages from Hydraulic winch.pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy"]
+    }
+  ]
+}

@@ -1,0 +1,2941 @@
+{
+  "counts": {
+    "spare_parts_table": 616,
+    "index_page": 397,
+    "drawing_only": 1000,
+    "repair_kit": 115,
+    "drawing_material_list": 377
+  },
+  "fixtures": {
+    "test1_main_distribution_board": [
+      {
+        "pages": "1",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-3",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "contents/index keyword"
+      },
+      {
+        "pages": "4-46",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "47-53",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      }
+    ],
+    "test2_distribution_board_fixture_only": [
+      {
+        "pages": "1",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-3",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "contents/index keyword"
+      },
+      {
+        "pages": "4",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5-9",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "10-11",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "13",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14-27",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "28",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "29",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "30",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31-32",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "33",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "34-37",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "38",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "39-42",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "43",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "44",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "45-54",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      }
+    ],
+    "test3_final_drawings_reference": [
+      {
+        "pages": "1-781",
+        "layout": "drawing_only",
+        "confidence": "high",
+        "reason": "reference workbook drawing pages"
+      }
+    ],
+    "test4_furuno_far2xx8_radar": [
+      {
+        "pages": "1",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "2",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "3-13",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "15-16",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "17",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "18-29",
+        "layout": "repair_kit",
+        "confidence": "high",
+        "reason": "equipment list pages from runner"
+      },
+      {
+        "pages": "30",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31-36",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "37-38",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "39",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "40-42",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "43",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "44",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "45-48",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "49-50",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "51",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "52-53",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "54-59",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "60-62",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "63-65",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "66-68",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "69",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "70-73",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "74-77",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "78",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "79",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "80-82",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "83",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "84",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "85",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "86",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "87",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "88-90",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "91-92",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "93",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "94",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "95-98",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "99-104",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "105-106",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "107-110",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "111",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "112-116",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "117",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "118",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "119",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "120-121",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "122",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "123-127",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "128",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "129",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "matrix/cross-reference keywords"
+      },
+      {
+        "pages": "130",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "131",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "132",
+        "layout": "repair_kit",
+        "confidence": "high",
+        "reason": "equipment list page from runner"
+      },
+      {
+        "pages": "133-136",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "137-138",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "contents/index keyword"
+      },
+      {
+        "pages": "139",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "140",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "141-143",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "144",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "145-146",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "147",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "148",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "149",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "contents/index keyword"
+      },
+      {
+        "pages": "150-153",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "154",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "155-156",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "157-158",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "159-165",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "166",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "167-169",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "contents/index keyword"
+      },
+      {
+        "pages": "170",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "171",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "172-195",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "196",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "197-215",
+        "layout": "repair_kit",
+        "confidence": "high",
+        "reason": "packing list pages from runner"
+      },
+      {
+        "pages": "216-260",
+        "layout": "drawing_only",
+        "confidence": "high",
+        "reason": "drawing pages from runner"
+      },
+      {
+        "pages": "261-274",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test5_ae_d2842le_dci": [
+      {
+        "pages": "1-3",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5-6",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "7",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8-9",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "10",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "11",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12-13",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "15",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "16-17",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "18",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "19-24",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "25",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "26-29",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "30",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "32-33",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "34",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "35-36",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "37-38",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "39",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "40",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "41-43",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "44",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "45-46",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "47",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "48-49",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "50",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "51-52",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "53",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "54-58",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "59-60",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "61-62",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "63",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "64-66",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "67-69",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "70",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "71",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "72",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "73-74",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "75-78",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "79",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "80",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "81",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "82-88",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "89",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test6_man_bw_spares_catalogue": [
+      {
+        "pages": "1-3",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6-7",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "10",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "11",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12-14",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "15",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "16",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "17",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "18",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "19",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "20",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "21",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "22",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "23",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "24",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "25",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "26",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "27-28",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "29",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "30",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "32",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "33",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "34",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "35",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "36",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "37-38",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "39",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "40",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "41",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "42",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "43",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "44",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "45",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "46",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "47",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "48",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "49",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "50",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "51",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "52",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "53",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "54",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "55",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "56",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "57",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "58",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "59",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "60",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "61",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "62",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "63",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "64-82",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "83",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "84",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "85-86",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "87",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "88",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "89",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "90-91",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "92",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "93",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "94",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "95",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "96",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "97",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "98-107",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "108",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "109",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "110",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "111",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "112",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "113",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "114",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "115",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "116",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "117-120",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "121",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "122",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "123",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "124",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "125",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "126-129",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "130",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "131-133",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "134",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "135-136",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "matrix/cross-reference keywords"
+      },
+      {
+        "pages": "137",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "138",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "139",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "140",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "141-142",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "143",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "144",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "145",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "146",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "147",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "148",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "149",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "150",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "151",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "152-153",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "154",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "155",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "156",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "157",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "158-159",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "160-161",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "162-164",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "165",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "166",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "167",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "168-169",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "170",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "171",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "172",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "173",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "174",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "175",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "176",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "177",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "178",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "179-182",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "183-185",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "186",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "187",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "188-191",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      }
+    ],
+    "test7_auxiliary_engine_spare_parts_1": [
+      {
+        "pages": "1",
+        "layout": "repair_kit",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "3-4",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6-62",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "runner page range"
+      }
+    ],
+    "test8_auxiliary_engine_spare_parts_2": [
+      {
+        "pages": "1",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-216",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "runner page range"
+      }
+    ],
+    "test9_obp_spare_full_list": [
+      {
+        "pages": "1",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-4",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6-8",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9-11",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12-13",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "15",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "16-21",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "22",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "23-26",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "27",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "28",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "29-31",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "32",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "33-34",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test10_cargo_area_fans": [
+      {
+        "pages": "1",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-3",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4-6",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "7-8",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test11_accommodation_fans": [
+      {
+        "pages": "1",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-3",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6-7",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8-11",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12-13",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test12_positive_displacement_pump": [
+      {
+        "pages": "1-2",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "3",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4-5",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "7-13",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "15-16",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "17",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "18-19",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "20",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "21-22",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "23",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "24",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test13_centrifugal_pump": [
+      {
+        "pages": "1-2",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "3",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4",
+        "layout": "repair_kit",
+        "confidence": "high",
+        "reason": "ACCESSORIES FOR EACH 1 PUMP"
+      },
+      {
+        "pages": "5-6",
+        "layout": "drawing_material_list",
+        "confidence": "high",
+        "reason": "material list pages"
+      },
+      {
+        "pages": "7",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "10",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "11-82",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "runner explicit pump/material pages"
+      },
+      {
+        "pages": "83",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "84-86",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "87",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "88-89",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "90",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "91",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "92",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "93",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "94",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "95",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "96",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "97",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "98",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "99",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "100",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "101",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "102",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "103",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "104",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "105",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "106",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "107",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "108",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "109",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "110",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "111",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "112",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "113",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "114",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "115",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "116",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "117-118",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "119-121",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "122-129",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "130",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "runner explicit page"
+      },
+      {
+        "pages": "131",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "132",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "133",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "134",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "135-151",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "152",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test14_obp_spare_full_list": [
+      {
+        "pages": "1",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-3",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "4",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6-7",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "10",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "11-12",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "13",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "14-15",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "16-19",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "20",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "21",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "22",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "23",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "24",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "25",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "26",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "27",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "28",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "29-30",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "32-34",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "35",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "36",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "37",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "38",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "39-40",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "41-42",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "43",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "44",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "drawing keyword"
+      },
+      {
+        "pages": "45-48",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "49",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "50-53",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "54",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "55",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "56",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "57-59",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "60",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "61",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "62",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "63",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "64",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "65",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "66",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "spare/list keyword"
+      },
+      {
+        "pages": "67-70",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "71",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "72",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "73",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "74-75",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "76-77",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "78-82",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "kit/accessory/equipment keyword"
+      },
+      {
+        "pages": "83",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "84-150",
+        "layout": "repair_kit",
+        "confidence": "high",
+        "reason": "runner explicit OBP standard/additional spare pages"
+      },
+      {
+        "pages": "151",
+        "layout": "drawing_only",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "152-155",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test15_hydraulic_winch": [
+      {
+        "pages": "1-4",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "5",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "6",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "7",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "10",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "11",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "12",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "13-25",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "26",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "27",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "28",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "29",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "30",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "31-52",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test16_carrier_5h_blowup_diagram": [
+      {
+        "pages": "1",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2-15",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "16",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "17",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "18-36",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      }
+    ],
+    "test17_emergency_diesel_engine": [
+      {
+        "pages": "1-7",
+        "layout": "index_page",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "8",
+        "layout": "spare_parts_table",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "9-181",
+        "layout": "drawing_material_list",
+        "confidence": "high",
+        "reason": "user/test17 requested extraction range"
+      }
+    ],
+    "test18_main_engine_accessories": [
+      {
+        "pages": "1-4",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "dimension/spec/drawing pages audited"
+      },
+      {
+        "pages": "5-7",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Pleiger spare list pages"
+      },
+      {
+        "pages": "8-9",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "drawing/title pages audited"
+      },
+      {
+        "pages": "10-13",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Pleiger spare list pages"
+      },
+      {
+        "pages": "14",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "drawing page audited"
+      },
+      {
+        "pages": "15-23",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Pleiger actuator spare list pages"
+      },
+      {
+        "pages": "24-26",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Pleiger annex table pages"
+      },
+      {
+        "pages": "27",
+        "layout": "repair_kit",
+        "confidence": "medium",
+        "reason": "heat exchanger embedded list of parts"
+      },
+      {
+        "pages": "28",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "EDUR section drawing"
+      },
+      {
+        "pages": "29",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "EDUR parts list"
+      },
+      {
+        "pages": "30-55",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Boll standard parts list pages"
+      },
+      {
+        "pages": "56-57",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "differential pressure spec/drawing pages"
+      },
+      {
+        "pages": "58",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "Boll drawing page"
+      },
+      {
+        "pages": "59-60",
+        "layout": "spare_parts_table",
+        "confidence": "medium",
+        "reason": "Boll list pages"
+      },
+      {
+        "pages": "61-62",
+        "layout": "index_page",
+        "confidence": "high",
+        "reason": "rotated Boll matrix/cross-reference list"
+      },
+      {
+        "pages": "63-75",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Boll parts list pages"
+      },
+      {
+        "pages": "76-77",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "drawing-only pages audited"
+      },
+      {
+        "pages": "78-84",
+        "layout": "index_page",
+        "confidence": "high",
+        "reason": "Boll NW matrix pages"
+      },
+      {
+        "pages": "85-88",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "Boll list pages"
+      },
+      {
+        "pages": "89-90",
+        "layout": "drawing_only",
+        "confidence": "medium",
+        "reason": "spec/drawing pages audited"
+      }
+    ],
+    "test19_life_boat_bukh_diesel": [
+      {
+        "pages": "1",
+        "layout": "repair_kit",
+        "confidence": "low",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "2",
+        "layout": "drawing_material_list",
+        "confidence": "medium",
+        "reason": "image heuristic fallback"
+      },
+      {
+        "pages": "3-39",
+        "layout": "spare_parts_table",
+        "confidence": "high",
+        "reason": "user/test19 requested extraction range"
+      }
+    ]
+  }
+}

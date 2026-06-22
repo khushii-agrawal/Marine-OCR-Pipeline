@@ -1,0 +1,35 @@
+{
+  "profile_id": "obp_mooring_winches_windlass",
+  "manufacturer": "",
+  "default_unit": "Pcs",
+  "schema": "../schema/spares_capture_schema.json",
+  "column_assumptions": {
+    "part_no_aliases": ["PART NUMBER", "PART NO", "PART"],
+    "description_aliases": ["DESCRIPTION", "NAME", "SPARE PART"],
+    "qty_aliases": ["QTY", "QUANTITY PER SHIPSET", "QUANTITY"],
+    "drawing_ref_aliases": ["DRAWING", "SKETCH"],
+    "material_aliases": ["MATERIAL"]
+  },
+  "document_profiles": [
+    {
+      "source_script": "scripts/run_test9.py",
+      "fixture_id": "test9_obp_spare_full_list",
+      "component": "Mooring Winches & Windlass",
+      "sub_component": "",
+      "model": "PIL 13K TEU Hudong Shipyard New Builds",
+      "manual_pdf_name": "13k obp spare - full list rev 4 (2) (1).pdf",
+      "known_layouts": ["standard_spare_parts_table", "drawing_material_list", "accessory_kit_equipment_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "DrawingMaterialListStrategy", "AccessoryKitListStrategy"]
+    },
+    {
+      "source_script": "scripts/run_test14.py",
+      "fixture_id": "test14_obp_spare_full_list",
+      "component": "OBP Spare List",
+      "sub_component": "",
+      "model": "PIL 13K TEU Hudong Shipyard New Builds",
+      "manual_pdf_name": "13k obp spare - full list rev 4 (2) (1) (1).pdf",
+      "known_layouts": ["standard_spare_parts_table", "accessory_kit_equipment_list"],
+      "future_strategy": ["StandardPartsTableStrategy", "AccessoryKitListStrategy"]
+    }
+  ]
+}

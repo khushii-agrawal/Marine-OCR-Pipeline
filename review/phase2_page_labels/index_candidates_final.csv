@@ -1,0 +1,57 @@
+fixture_id,pdf,page_no,layout,confidence,reason
+test1_main_distribution_board,Test/Test 1/23000143 11L REV 1 AS BUILT 5-12-2013 Pg No 47-53.pdf,2,index_page,high,table of contents pages
+test1_main_distribution_board,Test/Test 1/23000143 11L REV 1 AS BUILT 5-12-2013 Pg No 47-53.pdf,3,index_page,high,table of contents pages
+test2_distribution_board_fixture_only,Test/Test 2/23000143 12EP REV 1 AS BUILT 5-12-2013 Pg No 45-54 .pdf,2,index_page,high,table of contents pages
+test2_distribution_board_fixture_only,Test/Test 2/23000143 12EP REV 1 AS BUILT 5-12-2013 Pg No 45-54 .pdf,3,index_page,high,table of contents pages
+test4_furuno_far2xx8_radar,"Test/Test 4/IME36520W_FAR2xx8 pg No 18-29,132,197-215.pdf",167,index_page,medium,input/output data reference tables
+test4_furuno_far2xx8_radar,"Test/Test 4/IME36520W_FAR2xx8 pg No 18-29,132,197-215.pdf",168,index_page,medium,input/output data reference tables
+test4_furuno_far2xx8_radar,"Test/Test 4/IME36520W_FAR2xx8 pg No 18-29,132,197-215.pdf",169,index_page,medium,input/output data reference tables
+test6_man_bw_spares_catalogue,Test/Test 6/Extracted pages from MAN B&W SPARES PARTS CATALOGUE.pdf,135,index_page,medium,cross-reference/list table candidate
+test7_auxiliary_engine_spare_parts_1,Test/Test 7/Auxiliary engine spare parts 1.pdf,2,index_page,medium,contents/index table pages
+test7_auxiliary_engine_spare_parts_1,Test/Test 7/Auxiliary engine spare parts 1.pdf,3,index_page,medium,contents/index table pages
+test7_auxiliary_engine_spare_parts_1,Test/Test 7/Auxiliary engine spare parts 1.pdf,4,index_page,medium,contents/index table pages
+test14_obp_spare_full_list,Test/Test 14/13k obp spare - full list rev 4 (2) (1) (1).pdf,2,index_page,high,content pages
+test14_obp_spare_full_list,Test/Test 14/13k obp spare - full list rev 4 (2) (1) (1).pdf,3,index_page,high,content pages
+test14_obp_spare_full_list,Test/Test 14/13k obp spare - full list rev 4 (2) (1) (1).pdf,4,index_page,high,content pages
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,2,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,3,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,4,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,5,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,6,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,7,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,8,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,9,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,10,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,11,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,12,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,13,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,14,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,15,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,16,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,18,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,20,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,21,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,22,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,23,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,24,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,25,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,26,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,27,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,28,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,29,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,30,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,31,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,32,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,33,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,34,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,35,index_page,medium,Carrier chart/history/cross-reference page
+test16_carrier_5h_blowup_diagram,Test/Test 16/5H _blowUpDiagram (1).pdf,36,index_page,medium,Carrier chart/history/cross-reference page
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,61,index_page,high,rotated Boll matrix/cross-reference list
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,62,index_page,high,rotated Boll matrix/cross-reference list
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,78,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,79,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,80,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,81,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,82,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,83,index_page,high,Boll NW matrix pages
+test18_main_engine_accessories,Test/Test 18/Extracted pages from Main engine assessories (1).pdf,84,index_page,high,Boll NW matrix pages

@@ -9,3 +9,5 @@ opencv-python
 paddleocr
 paddlepaddle==2.6.2
 numpy<2
+onnxruntime
+rapidfuzz
