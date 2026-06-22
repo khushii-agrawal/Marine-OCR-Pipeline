@@ -126,8 +126,14 @@ def main() -> None:
 
     results = run_regression(max_pages=args.max_pages, dpi=args.dpi)
     if args.json_output:
-        args.json_output.parent.mkdir(parents=True, exist_ok=True)
-        args.json_output.write_text(json.dumps(results, indent=2), encoding="utf-8")
+        try:
+            args.json_output.parent.mkdir(parents=True, exist_ok=True)
+            args.json_output.write_text(json.dumps(results, indent=2), encoding="utf-8")
+        except PermissionError:
+            fallback = ROOT / "tmp" / args.json_output.name
+            fallback.parent.mkdir(parents=True, exist_ok=True)
+            fallback.write_text(json.dumps(results, indent=2), encoding="utf-8")
+            print(f"WARNING: Could not write {args.json_output}; wrote {fallback} instead.")
 
     print("Per-manufacturer Phase 4 gate results:")
     for manufacturer, counts in sorted(results["manufacturers"].items()):

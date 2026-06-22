@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass
 from typing import Any, Callable
 
 import cv2
 import numpy as np
+
+logging.getLogger("ppocr").setLevel(logging.ERROR)
 
 
 @dataclass(frozen=True)
@@ -69,7 +72,7 @@ def _run_paddle(image: np.ndarray, paddle_ocr: Any) -> tuple[str, float]:
             from paddleocr import PaddleOCR
         except ImportError:
             return "", 0.0
-        paddle_ocr = PaddleOCR(use_angle_cls=True, lang="en", show_log=False)
+        paddle_ocr = PaddleOCR(use_angle_cls=True, lang="en")
     return _parse_paddle_result(paddle_ocr.ocr(image, cls=True))
 
 
